@@ -1,0 +1,39 @@
+{
+  "name": "as-run-js",
+  "description": "Run JavaScript code from AssemblyScript",
+  "version": "0.0.1",
+  "types": "assembly/runJS.ts",
+  "ascMain": "assembly/runJS.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JairusSW/as-run-js.git"
+  },
+  "keywords": [
+    "AssemblyScript",
+    "eval",
+    "javascript"
+  ],
+  "devDependencies": {
+    "@types/node": "^8.10.66",
+    "assemblyscript": "^0.19.1"
+  },
+  "scripts": {
+    "asbuild:untouched": "asc assembly/runJS.ts --target debug",
+    "asbuild:optimized": "asc assembly/runJS.ts --target release",
+    "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized",
+    "test": "node tests"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.1",
+    "as-console": "^5.0.3"
+  },
+  "author": "Jairus Tanaka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JairusSW/as-run-js/issues"
+  },
+  "homepage": "https://github.com/JairusSW/as-run-js#readme"
+}
