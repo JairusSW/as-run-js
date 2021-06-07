@@ -1,3 +1,5 @@
+// If on browser, we don't need to care.
+
 class RunJS {
     constructor() {
         this._exports = null

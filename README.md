@@ -3,7 +3,7 @@
 
 ## Installation
 
-```js
+```bash
 ~ npm install as-run-js
 ```
 
@@ -26,23 +26,11 @@ const wasmModule = loader.instantiateSync(..., imports);
 
 **AssemblyScript**
 
-Access the console
 ```js
-import { runJS } from 'as-run-js'
+import { runJS } from 'as-run-js;
 
-runJS(`console.log('Hello from as-runJS!')`)
-// 'Hello from as-runJS'
-```
-
-Write a file
-
-```js
-import { runJS } from 'as-run-js'
-
-runJS(`
-    const fs = require('fs')
-    fs.writeFileSync('./RunJS.txt', 'Hello from as-runJS!')
-`)
+runJS(`console.log('Hello from AssemblyScript with RunJS!')`)
+// Runs in the main file. Can access anything.
 ```
 
 ## Safety
